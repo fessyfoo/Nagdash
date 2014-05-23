@@ -146,6 +146,7 @@ foreach($state as $hostname => $host_detail) {
                     "current_attempt" => $service_detail['current_attempt'],
                     "max_attempts" => $service_detail['max_attempts'],
                     "tag" => $host_detail['tag'],
+                    "url" => $host_detail['url'],
                     "is_hard" => ($service_detail['current_attempt'] >= $service_detail['max_attempts']) ? true : false,
                     "is_downtime" => ($service_detail['scheduled_downtime_depth'] > 0 || $host_detail['scheduled_downtime_depth'] > 0) ? true : false,
                     "downtime_remaining" => $downtime_remaining,
